@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>为什么不使用宏定义</title>
+    <url>/post/2021/macros/</url>
+    <content><![CDATA[<h5 id="宏定义的缺陷"><a href="#宏定义的缺陷" class="headerlink" title="宏定义的缺陷"></a>宏定义的缺陷</h5><ol>
+<li>宏定义在预处理阶段被替换，不会进入符号表，会给调试与处理编译错误增加困难。</li>
+<li>宏定义在所有出现的地方进行替换，将增大生成的目标代码的体积。</li>
+<li>宏定义无法限制作用域，更不能提供任何封装性。</li>
+<li>宏定义难以避免调用时的边际效应（诸如自增等操作符可能使宏定义不合预期）。</li>
+</ol>
+<h5 id="正确的编程实践"><a href="#正确的编程实践" class="headerlink" title="正确的编程实践"></a>正确的编程实践</h5><ol>
+<li>使用 <code>const</code>，<code>enum</code> 等定义常量。</li>
+<li>使用 <code>inline</code> 函数。</li>
+</ol>
+]]></content>
+  </entry>
+</search>
