@@ -186,7 +186,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cmn-Hans-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.uoen.me/post/2021/macros/">
+    <link itemprop="mainEntityOfPage" href="https://blog.uoen.me/post/2021/sum/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -200,7 +200,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/post/2021/macros/" class="post-title-link" itemprop="url">为什么不使用宏定义</a>
+            <a href="/post/2021/sum/" class="post-title-link" itemprop="url">基础知识总结</a>
         </h2>
 
         <div class="post-meta">
@@ -228,7 +228,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>167</span>
+              <span>393</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -247,7 +247,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h5 id="宏定义的缺陷"><a href="#宏定义的缺陷" class="headerlink" title="宏定义的缺陷"></a>宏定义的缺陷</h5><ol>
+          <h4 id="宏相关"><a href="#宏相关" class="headerlink" title="宏相关"></a>宏相关</h4><h5 id="宏定义的缺陷"><a href="#宏定义的缺陷" class="headerlink" title="宏定义的缺陷"></a>宏定义的缺陷</h5><ol>
 <li>宏定义在预处理阶段被替换，不会进入符号表，会给调试与处理编译错误增加困难。</li>
 <li>宏定义在所有出现的地方进行替换，将增大生成的目标代码的体积。</li>
 <li>宏定义无法限制作用域，更不能提供任何封装性。</li>
@@ -257,6 +257,8 @@
 <li>使用 <code>const</code>，<code>enum</code> 等定义常量。</li>
 <li>使用 <code>inline</code> 函数。</li>
 </ol>
+<h4 id="堆栈相关"><a href="#堆栈相关" class="headerlink" title="堆栈相关"></a>堆栈相关</h4><p>栈中的变量成为自动变量或局部变量，由处理器自动创建与销毁。存放在栈或静态存储区中的对象的存储和生命周期在编译时确定，可以快速分配和释放，在运行效率上有优势，但牺牲了灵活性（在编写程序时就必须知道对象的数量、生命周期和类型）。</p>
+<p>在堆中动态创建对象，可以在运行时决定创建的对象的数量、生命期和类型。但在堆上分配存储所需要的时间比在栈上创建存储要 <strong>长得多</strong>。同时，在堆上创建的对象无法由编译器决定其生命周期，在 C++ 中需要程序员编程决定何时将其销毁。</p>
 
       
     </div>
